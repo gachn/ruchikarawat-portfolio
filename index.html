@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Meraki Creation — Ruchika | Watercolor & Acrylic Artist</title>
+<meta name="description" content="Meraki Creation by Ruchika — a self-taught watercolor & acrylic artist. Original paintings, custom portraits, doodle art & handmade bookmarks. Art made with soul." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --coral: #e5484d;
+    --coral-deep: #b62b34;
+    --pink: #ff6fa5;
+    --pink-soft: #ffd3e2;
+    --blue: #2d6be5;
+    --blue-night: #17224d;
+    --cream: #fff6ef;
+    --cream-2: #fdeee3;
+    --ink: #24170f;
+    --muted: #7a6a60;
+    --gold: #d9a441;
+    --radius: 22px;
+    --shadow: 0 18px 50px -18px rgba(122, 43, 52, 0.45);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--ink);
+    background:
+      radial-gradient(1200px 700px at 80% -10%, var(--pink-soft), transparent 60%),
+      radial-gradient(900px 600px at -10% 20%, #ffe3d0, transparent 55%),
+      var(--cream);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3 { font-family: 'Fraunces', serif; font-weight: 600; line-height: 1.1; }
+
+  a { color: inherit; text-decoration: none; }
+
+  .wrap { width: min(1160px, 92vw); margin-inline: auto; }
+
+  .accent { color: var(--coral); }
+  .script { font-style: italic; font-weight: 400; }
+
+  /* ---------- NAV ---------- */
+  header.nav {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(14px);
+    background: rgba(255, 246, 239, 0.72);
+    border-bottom: 1px solid rgba(182, 43, 52, 0.12);
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+  .brand { display: flex; align-items: center; gap: 12px; font-family: 'Fraunces', serif; font-weight: 600; font-size: 20px; }
+  .brand .mark {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, var(--pink), var(--coral) 55%, var(--coral-deep));
+    display: grid; place-items: center; color: #fff; font-size: 18px;
+    box-shadow: 0 6px 18px -6px rgba(182,43,52,.6);
+  }
+  .nav-links { display: flex; gap: 26px; font-size: 15px; font-weight: 400; }
+  .nav-links a { position: relative; color: var(--muted); transition: color .2s; }
+  .nav-links a:hover { color: var(--coral); }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, var(--coral), var(--pink));
+    color: #fff; padding: 11px 22px; border-radius: 999px; font-weight: 500; font-size: 15px;
+    box-shadow: 0 10px 24px -10px rgba(229,72,77,.8); transition: transform .18s, box-shadow .18s;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 16px 30px -12px rgba(229,72,77,.9); }
+  .btn.ghost { background: transparent; color: var(--coral); border: 1.5px solid var(--coral); box-shadow: none; }
+  .btn.ghost:hover { background: var(--coral); color:#fff; }
+  @media (max-width: 760px){ .nav-links{ display:none; } }
+
+  /* ---------- HERO ---------- */
+  .hero { padding: 72px 0 40px; display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+  .eyebrow { text-transform: uppercase; letter-spacing: .28em; font-size: 12px; color: var(--coral-deep); font-weight: 600; margin-bottom: 18px; }
+  .hero h1 { font-size: clamp(40px, 6vw, 74px); }
+  .hero h1 .line2 { color: var(--coral); }
+  .hero p.lead { margin: 22px 0 30px; font-size: 18px; color: var(--muted); max-width: 46ch; }
+  .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
+  .stats { display: flex; gap: 34px; margin-top: 40px; }
+  .stat .n { font-family:'Fraunces',serif; font-size: 30px; font-weight: 600; color: var(--coral-deep); }
+  .stat .l { font-size: 13px; color: var(--muted); letter-spacing:.04em; }
+
+  .hero-art { position: relative; height: 440px; }
+  .frame {
+    position: absolute; border-radius: 16px; overflow: hidden;
+    box-shadow: var(--shadow); border: 8px solid #fff;
+  }
+  .frame span.tag { position:absolute; bottom:10px; left:12px; color:#fff; font-size:12px; font-weight:500; text-shadow:0 1px 4px rgba(0,0,0,.5); }
+  .frame.a { width: 240px; height: 320px; top: 10px; right: 40px; transform: rotate(4deg); z-index:2; }
+  .frame.b { width: 190px; height: 250px; top: 150px; left: 0; transform: rotate(-6deg); z-index:3; }
+  .frame.c { width: 150px; height: 150px; bottom: -10px; right: 0; transform: rotate(8deg); z-index:1; }
+  .art-clouds { background:
+      radial-gradient(120px 90px at 40% 70%, var(--pink), transparent 70%),
+      radial-gradient(120px 80px at 65% 78%, #ff9ec4, transparent 70%),
+      linear-gradient(180deg, #1b3a8f, #2d6be5 55%, #6f9bff); }
+  .art-street { background:
+      linear-gradient(180deg, #7a2f6b, #b62b52 40%, #3a1f66 100%); position:relative; }
+  .art-street::after{ content:""; position:absolute; inset:0;
+      background: radial-gradient(40px 40px at 30% 40%, rgba(255,190,60,.9), transparent 70%),
+                  radial-gradient(6px 6px at 60% 55%, var(--pink), transparent),
+                  radial-gradient(6px 6px at 45% 65%, var(--pink), transparent); }
+  .art-seagull { background: radial-gradient(circle at 60% 40%, #ff5a5f, var(--coral-deep) 80%); }
+
+  @media (max-width: 860px){
+    .hero{ grid-template-columns: 1fr; text-align:center; }
+    .hero p.lead{ margin-inline:auto; }
+    .hero-cta,.stats{ justify-content:center; }
+    .hero-art{ height: 380px; margin-top: 20px; }
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section { padding: 78px 0; }
+  .sec-head { text-align:center; max-width: 60ch; margin: 0 auto 46px; }
+  .sec-head .eyebrow { margin-bottom: 12px; }
+  .sec-head h2 { font-size: clamp(30px, 4.4vw, 46px); }
+  .sec-head p { color: var(--muted); margin-top: 14px; font-size: 17px; }
+
+  /* ---------- ABOUT ---------- */
+  .about { display:grid; grid-template-columns: .85fr 1.15fr; gap: 50px; align-items:center; }
+  .about-card {
+    border-radius: var(--radius); padding: 40px 34px; color:#fff; position:relative; overflow:hidden;
+    background: linear-gradient(150deg, var(--coral), var(--pink)); box-shadow: var(--shadow);
+  }
+  .about-card .m {
+    font-family:'Fraunces',serif; font-size: 60px; line-height:1; display:block; margin-bottom: 10px; opacity:.95;
+  }
+  .about-card p { font-size: 15px; opacity:.95; }
+  .about-body h2 { font-size: clamp(28px, 4vw, 42px); margin-bottom: 18px; }
+  .about-body p { color: var(--muted); margin-bottom: 16px; }
+  .chips { display:flex; flex-wrap:wrap; gap:10px; margin-top: 22px; }
+  .chip { background:#fff; border:1px solid var(--pink-soft); padding:8px 16px; border-radius:999px; font-size:14px; color:var(--coral-deep); font-weight:500; box-shadow: 0 6px 16px -12px rgba(182,43,52,.6); }
+  @media (max-width: 820px){ .about{ grid-template-columns:1fr; } }
+
+  /* ---------- GALLERY ---------- */
+  .gallery-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .piece { border-radius: 18px; overflow:hidden; position:relative; box-shadow: var(--shadow); background:#fff; aspect-ratio: 4/5; }
+  .piece .canvas { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .piece .meta {
+    position:absolute; inset:auto 0 0 0; padding: 40px 18px 16px; color:#fff;
+    background: linear-gradient(180deg, transparent, rgba(20,10,6,.72)); transform: translateY(6px); transition: .3s;
+  }
+  .piece .meta h4 { font-family:'Fraunces',serif; font-size: 19px; }
+  .piece .meta small { opacity:.85; font-size: 12.5px; letter-spacing:.03em; }
+  .piece:hover .canvas { transform: scale(1.05); }
+  .piece .canvas { transition: transform .5s ease; }
+
+  .g-clouds { background: radial-gradient(140px 100px at 42% 72%, var(--pink), transparent 72%), radial-gradient(140px 90px at 66% 80%, #ff9ec4, transparent 72%), linear-gradient(180deg,#152f7a,#2d6be5 55%,#7aa0ff); }
+  .g-street { background: linear-gradient(180deg,#6d2b63,#b62b52 45%,#331b5c); }
+  .g-pet { background: radial-gradient(circle at 50% 38%, #f4c05a, #caa23a 70%, #6d4d18); }
+  .g-seagull { background: radial-gradient(circle at 58% 42%, #ff5a5f, var(--coral-deep) 82%); }
+  .g-doodle { background: repeating-linear-gradient(45deg, #fff 0 14px, #ffe7f0 14px 28px); }
+  .g-3d { background: conic-gradient(from 210deg at 50% 50%, var(--pink), var(--blue), var(--coral), var(--pink)); }
+  @media (max-width: 820px){ .gallery-grid{ grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 520px){ .gallery-grid{ grid-template-columns: 1fr; } }
+
+  /* ---------- SHOP ---------- */
+  .shop { background: linear-gradient(180deg, transparent, rgba(255,211,226,.35)); border-radius: 40px; }
+  .shop-grid { display:grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+  .card {
+    background:#fff; border-radius: var(--radius); padding: 28px; box-shadow: 0 16px 40px -22px rgba(122,43,52,.5);
+    border:1px solid rgba(255,111,165,.18); display:flex; flex-direction:column; transition: transform .2s, box-shadow .2s;
+  }
+  .card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+  .card .ic { width: 52px; height: 52px; border-radius: 14px; display:grid; place-items:center; font-size: 24px; margin-bottom: 18px;
+    background: linear-gradient(135deg, var(--pink-soft), #fff); }
+  .card h3 { font-size: 21px; margin-bottom: 8px; }
+  .card p { color: var(--muted); font-size: 15px; flex:1; }
+  .card .price { margin-top: 18px; font-family:'Fraunces',serif; font-size: 22px; color: var(--coral-deep); font-weight:600; }
+  .card .price small { font-size: 13px; color: var(--muted); font-weight: 400; font-family:'Poppins'; }
+  @media (max-width: 820px){ .shop-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- PROCESS ---------- */
+  .steps { display:grid; grid-template-columns: repeat(4,1fr); gap: 22px; }
+  .step { text-align:center; padding: 26px 18px; }
+  .step .num { width:56px; height:56px; margin: 0 auto 16px; border-radius:50%; display:grid; place-items:center;
+    font-family:'Fraunces',serif; font-size:22px; color:#fff; background: linear-gradient(135deg,var(--coral),var(--pink)); box-shadow:0 10px 24px -12px rgba(229,72,77,.8); }
+  .step h4 { font-family:'Fraunces',serif; font-size:18px; margin-bottom:6px; }
+  .step p { font-size:14px; color:var(--muted); }
+  @media (max-width: 760px){ .steps{ grid-template-columns: repeat(2,1fr); } }
+
+  /* ---------- TESTIMONIALS ---------- */
+  .quotes { display:grid; grid-template-columns: repeat(3,1fr); gap:22px; }
+  .quote { background:#fff; border-radius: var(--radius); padding: 28px; box-shadow: 0 14px 38px -24px rgba(122,43,52,.5); }
+  .quote .stars { color: var(--gold); letter-spacing:2px; margin-bottom:12px; }
+  .quote p { font-size:15px; color: var(--ink); font-style:italic; }
+  .quote .who { margin-top:16px; font-weight:500; font-size:14px; color: var(--coral-deep); }
+  @media (max-width: 820px){ .quotes{ grid-template-columns:1fr; } }
+
+  /* ---------- CTA / CONTACT ---------- */
+  .contact { text-align:center; }
+  .contact-box {
+    border-radius: 32px; padding: 60px 30px; color:#fff; position:relative; overflow:hidden;
+    background: linear-gradient(135deg, var(--coral-deep), var(--coral) 50%, var(--pink));
+    box-shadow: var(--shadow);
+  }
+  .contact-box::after{ content:""; position:absolute; inset:0;
+    background: radial-gradient(300px 200px at 15% 20%, rgba(255,255,255,.25), transparent 60%),
+               radial-gradient(300px 200px at 85% 90%, rgba(23,34,77,.4), transparent 60%); }
+  .contact-box > * { position:relative; z-index:2; }
+  .contact-box h2 { font-size: clamp(30px,4.5vw,46px); }
+  .contact-box p { margin: 16px auto 30px; max-width: 52ch; opacity:.95; }
+  .contact-actions { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+  .btn.wa { background:#fff; color: var(--coral-deep); }
+  .btn.ig { background: transparent; border:1.5px solid rgba(255,255,255,.7); color:#fff; box-shadow:none; }
+  .btn.ig:hover{ background:#fff; color:var(--coral-deep); }
+
+  /* ---------- FOOTER ---------- */
+  footer { padding: 40px 0 60px; text-align:center; color: var(--muted); font-size: 14px; }
+  footer .brand { justify-content:center; margin-bottom: 14px; color: var(--ink); }
+  footer a { color: var(--coral); }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <div class="brand"><span class="mark">M</span> Meraki Creation</div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#shop">Shop</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="https://wa.me/919634073667" target="_blank" rel="noopener">Commission Art</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero wrap" style="padding-top:64px;">
+  <div>
+    <div class="eyebrow">Meraki Creation · Handmade with Soul</div>
+    <h1>Hi, I'm <span class="script accent">Ruchika</span><br><span class="line2">I paint feelings.</span></h1>
+    <p class="lead">A self-taught <strong>watercolor &amp; acrylic artist</strong>. From dreamy skies to custom portraits — every piece is original, handmade, and made to order. Art you can hang, gift, and keep forever.</p>
+    <div class="hero-cta">
+      <a class="btn" href="#shop">Shop Artwork</a>
+      <a class="btn ghost" href="#gallery">View Gallery</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="n">173+</div><div class="l">Artworks created</div></div>
+      <div class="stat"><div class="n">400+</div><div class="l">Art lovers</div></div>
+      <div class="stat"><div class="n">100%</div><div class="l">Handmade</div></div>
+    </div>
+  </div>
+  <div class="hero-art">
+    <div class="frame a"><img src="img/meraki_art_4.jpg" alt="Moonlit ocean acrylic painting" style="width:100%;height:100%;object-fit:cover"><span class="tag">Moonlit Waters</span></div>
+    <div class="frame b"><img src="img/meraki_art_14.jpg" alt="Realistic portrait with Madhubani border" style="width:100%;height:100%;object-fit:cover"><span class="tag">Custom Portrait</span></div>
+    <div class="frame c"><img src="img/meraki_art_10.jpg" alt="Pink Floyd pop-art acrylic" style="width:100%;height:100%;object-fit:cover"><span class="tag">Pop Art</span></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap about">
+    <div class="about-card">
+      <span class="m">meráki</span>
+      <p><em>(n.) the soul, love, and creativity you pour into your work — leaving a piece of yourself in it.</em></p>
+      <p style="margin-top:18px; opacity:.9;">That word is my whole studio. Every brushstroke carries a little bit of me.</p>
+    </div>
+    <div class="about-body">
+      <div class="eyebrow">The artist behind the brush</div>
+      <h2>Self-taught, soul-driven.</h2>
+      <p>I'm Ruchika — founder of Meraki Creation. I never went to art school; I taught myself watercolor and acrylic by chasing colors that made me feel something. What started as small sketches became a studio full of moonlit skies, character art, and portraits so real they feel alive.</p>
+      <p>Today I create <strong>custom-made artwork</strong> for people all over — birthday gifts, pet portraits, wedding keepsakes, and statement pieces for cozy walls. If you can picture it, I can paint it.</p>
+      <div class="chips">
+        <span class="chip">Acrylic</span>
+        <span class="chip">Watercolor</span>
+        <span class="chip">Night Skies &amp; Moons</span>
+        <span class="chip">Realistic Portraits</span>
+        <span class="chip">Anime &amp; Pop Art</span>
+        <span class="chip">Madhubani</span>
+        <span class="chip">Handmade Bookmarks</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Portfolio</div>
+      <h2>A gallery of little worlds</h2>
+      <p>A glimpse of originals from the studio. Each one is one-of-a-kind — and most can be recreated or customized just for you.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="piece"><img class="canvas" src="img/meraki_art_4.jpg" alt="Moonlit ocean at night"><div class="meta"><h4>Moonlit Waters</h4><small>Acrylic on canvas · Full moon seascape</small></div></div>
+      <div class="piece"><img class="canvas" src="img/meraki_art_7.jpg" alt="Moon and clouds night sky"><div class="meta"><h4>Midnight Clouds</h4><small>Acrylic on canvas · Night sky study</small></div></div>
+      <div class="piece"><img class="canvas" src="img/meraki_art_14.jpg" alt="Realistic portrait with Madhubani border"><div class="meta"><h4>Grace</h4><small>Realistic portrait · Madhubani border · Custom</small></div></div>
+      <div class="piece"><img class="canvas" src="img/meraki_art_10.jpg" alt="Pink Floyd pop-art portrait"><div class="meta"><h4>Legends in Colour</h4><small>Acrylic · Pop-art music portrait</small></div></div>
+      <div class="piece"><img class="canvas" src="img/meraki_art_0.jpg" alt="Anime character family portrait"><div class="meta"><h4>Anime Bonds</h4><small>Acrylic on canvas · Character art</small></div></div>
+      <div class="piece"><img class="canvas" src="img/meraki_art_2.jpg" alt="Anime team portrait on canvas"><div class="meta"><h4>The Squad</h4><small>Acrylic on canvas · Fan-favourite characters</small></div></div>
+    </div>
+    <p style="text-align:center; margin-top:30px; color:var(--muted);">See all 173+ works on <a href="https://www.instagram.com/_meraki_creation/" target="_blank" rel="noopener" style="color:var(--coral); font-weight:500;">Instagram @_meraki_creation ↗</a></p>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section id="shop">
+  <div class="wrap shop" style="padding:60px 6% ;">
+    <div class="sec-head">
+      <div class="eyebrow">Shop &amp; Commissions</div>
+      <h2>Take a piece of Meraki home</h2>
+      <p>Everything is handmade to order. Prices are starting points — final quote depends on size, detail, and framing. Message me and let's create something yours.</p>
+    </div>
+    <div class="shop-grid">
+      <div class="card">
+        <div class="ic">🖼️</div>
+        <h3>Original Paintings</h3>
+        <p>One-of-a-kind watercolor &amp; acrylic art — florals, landscapes, and cityscapes. Sizes from A5 to large canvas, framing optional. Includes a size chart so you pick the perfect fit.</p>
+        <div class="price">from ₹599 <small>/ size dependent</small></div>
+      </div>
+      <div class="card">
+        <div class="ic">🎨</div>
+        <h3>Custom Portraits</h3>
+        <p>Turn a photo into art — people, couples, pets, or families. A heartfelt gift for birthdays, weddings, and anniversaries. Send a picture, get a painting.</p>
+        <div class="price">from ₹999 <small>/ per subject</small></div>
+      </div>
+      <div class="card">
+        <div class="ic">🔖</div>
+        <h3>Handmade Bookmarks</h3>
+        <p>Tiny hand-painted bookmarks — the sweetest little gift or self-treat. Detailed, laminated, and ready to ship in careful packaging.</p>
+        <div class="price">₹80 <small>/ each</small></div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:34px;">
+      <a class="btn" href="https://wa.me/919634073667" target="_blank" rel="noopener">Browse full catalog on WhatsApp →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">How ordering works</div>
+      <h2>From your idea to your wall</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h4>Say hi</h4><p>Message me on WhatsApp or Instagram with your idea or reference photo.</p></div>
+      <div class="step"><div class="num">2</div><h4>Pick &amp; price</h4><p>We choose size &amp; style from the size chart and lock a final quote.</p></div>
+      <div class="step"><div class="num">3</div><h4>I paint</h4><p>Your piece is hand-created with progress updates along the way.</p></div>
+      <div class="step"><div class="num">4</div><h4>Safe delivery</h4><p>Carefully packaged and shipped to your door — happy unboxing guaranteed.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Happy customers</div>
+      <h2>Loved &amp; hung on walls everywhere</h2>
+    </div>
+    <div class="quotes">
+      <div class="quote"><div class="stars">★★★★★</div><p>"The painting is even more beautiful in person. Packaging was so safe and thoughtful — reached me perfectly!"</p><div class="who">— A happy collector</div></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"Got a custom portrait made as a gift. She captured every detail. My family was in tears. Worth every rupee."</p><div class="who">— Custom portrait order</div></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"Ordered bookmarks and a small piece. Such detailing for the price. Ruchika is so sweet to work with."</p><div class="who">— Repeat buyer</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="contact-box">
+      <div class="eyebrow" style="color:rgba(255,255,255,.85);">Let's create together</div>
+      <h2>Have something in mind?</h2>
+      <p>Whether it's a gift, a portrait, or a piece for your own space — tell me your idea and I'll bring it to life with a little bit of meraki.</p>
+      <div class="contact-actions">
+        <a class="btn wa" href="https://wa.me/919634073667" target="_blank" rel="noopener">💬 Order on WhatsApp</a>
+        <a class="btn ig" href="https://www.instagram.com/_meraki_creation/" target="_blank" rel="noopener">📷 @_meraki_creation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><span class="mark">M</span> Meraki Creation</div>
+    <p>Original handmade watercolor &amp; acrylic art by Ruchika.</p>
+    <p style="margin-top:8px;">© <span id="yr"></span> Meraki Creation · Made with 🌺 &amp; a lot of meraki · <a href="https://www.instagram.com/_meraki_creation/" target="_blank" rel="noopener">Instagram</a> · <a href="https://wa.me/919634073667" target="_blank" rel="noopener">WhatsApp</a></p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
